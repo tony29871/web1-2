@@ -18,23 +18,42 @@
 
     <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <style>
+     <link rel="stylesheet" href="style.css">
+     <style>
         .however{
             color:red;
         }
     </style>
 </head>
 <body>
-    <input type="button" value = "day" onclick="
-    document.querySelector('body').style.backgroundColor = 'white';
-    document.querySelector('body').style.color = 'black';
+    <input id="night_day" type="button" value = "night" onclick="
+    var target = document.querySelector('body')
+    if(this.value === 'day'){
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value ='night';
+
+        var alist = document.querySelectorAll('a');
+        for(var i=0;i<alist.length;i++){
+            if(alist[i].style.color =='lightgreen'){
+            alist[i].style.color = 'skyblue';}
+        }
+    }
+    else{
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        
+        var alist = document.querySelectorAll('a');
+        for(var i=0;i<alist.length;i++){
+            //if(alist[i].style.color =='skyblue')
+                alist[i].style.color = 'lightgreen';
+        }
+
+        this.value ='day';
+    }
     ">
-    <input type="button" value = "night" onclick="
-        document.querySelector('body').style.backgroundColor = 'black';
-        document.querySelector('body').style.color = 'white';
-    ">
-    
-        <div class = "container">
+
+    <div class = "container">
     <h1><a href = "index.html">WEB</a></h1>
     <ul class="nav nav-tabs">
         <li role="presentation" class="active"><a href="index.html">Home</a></li>

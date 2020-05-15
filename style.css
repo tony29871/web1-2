@@ -1,47 +1,53 @@
-        a,li{  /*태그 선택자*/   /*css selector 검색을 통해 짜기*/
-            color:skyblue;
-            text-decoration: none; 
-        }
-        .saw{ /* . class가 saw인 태그 선택*/
-            color:gray;
-        }
-        #active{ /* # id선택자*/
-            color: red;
-        }
-        #grid{
-            display: grid;
-            grid-template-columns: 300px 1fr;
-        }
-        #grid ol{           /*그리드 안에 있는 ol*/
-            padding-left: 50px;
-            padding-top: 20px;
-            border-right: 1px solid gray;
-            margin:0;
-        }
-        h1{  /*block level element 제목태그*/
-            font-size: 70px;
-            text-align: center;
-           /* border-width:5px;
-            border-color: red;
-            border-style: solid;
-            */
-            padding: 20px; /*CSS Boxmodel 검색*/
-            /*display: none;  사라지게 하기*/
-            border-bottom: 1px solid gray;
-            margin: 0;
-            background-color: gray;
-        }
-        /*inline element의 예 a태그*/
+a,li{  /*태그 선택자*/   /*css selector 검색을 통해 짜기*/
+    color:skyblue;
+    text-decoration: none; 
+}
+.saw{ /* . class가 saw인 태그 선택*/
+    color:gray;
+}
+#active{ /* # id선택자*/
+    color: red;
+}
+#grid{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+#grid ol{           /*그리드 안에 있는 ol*/
+    padding-left: 50px;
+    padding-top: 20px;
+    border-right: 1px solid gray;
+    margin:0;
+}
+h1{  /*block level element 제목태그*/
+    font-size: 50px;
+    text-align: center;
+    /* border-width:5px;
+    border-color: red;
+    border-style: solid;
+    */
+    padding: 20px; /*CSS Boxmodel 검색*/
+    /*display: none;  사라지게 하기*/
+    border-bottom: 1px solid gray;
+    margin: 0;
+    background-color: gray;
+}
+/*inline element의 예 a태그*/
 
-        #article{
-            padding-top: 20px;
-            padding-left: 25px;
-        }
-        @media(max-width: 600px){
-            #grid{
-            display: block;
-            }
-            #grid ol{
-            border-right: none;
-            }
-        }
+#article{
+    padding-top: 20px;
+    padding-left: 25px;
+}
+#night_day{
+    position: absolute;
+    margin:10px;
+    right: 1%;
+    color: black;
+}
+@media(max-width: 600px){
+    #grid{
+    display: block;
+    }
+    #grid ol{
+    border-right: none;
+    }
+}
