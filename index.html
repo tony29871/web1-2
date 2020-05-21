@@ -1,98 +1,71 @@
 <!doctype html>
 <html>
+
 <head>
-    <title>Web1 - html</title>
-    <meta charset="utf-8">    
-    <link rel="stylesheet" href="style.css">
-    <!--jquery사이트에서 가져오기-->
-    <script
-    src="https://code.jquery.com/jquery-3.5.0.js"
-    integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
-    crossorigin="anonymous"></script>
+<title>Web1 - html</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<!--jquery사이트에서 가져오기-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
 
-    <!-- 합쳐지고 최소화된 최신 CSS // 부트스트랩사이트에서 긁어오기 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- 합쳐지고 최소화된 최신 CSS // 부트스트랩사이트에서 긁어오기 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
-    <!-- 부가적인 테마 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-     <link rel="stylesheet" href="style.css">
-     <style>
-        .however{
-            color:red;
-        }
-    </style>
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<script src="javascript.js"></script>
 </head>
+
 <body>
-    <input id="night_day" type="button" value = "night" onclick="
-    var target = document.querySelector('body')
-    if(this.value === 'day'){
-        target.style.backgroundColor = 'white';
-        target.style.color = 'black';
-        this.value ='night';
+    <input id="night_day" type="button" value="night" onclick="value = nightDayHandler(this.value)">
 
-        var alist = document.querySelectorAll('a');
-        for(var i=0;i<alist.length;i++){
-            if(alist[i].style.color =='lightgreen'){
-            alist[i].style.color = 'skyblue';}
-        }
-    }
-    else{
-        target.style.backgroundColor = 'black';
-        target.style.color = 'white';
-        
-        var alist = document.querySelectorAll('a');
-        for(var i=0;i<alist.length;i++){
-            //if(alist[i].style.color =='skyblue')
-                alist[i].style.color = 'lightgreen';
-        }
+    <div class="container">
+        <h1><a href="index.html" class="skyblue">WEB</a></h1>
+        <ul class="nav nav-tabs skyblue">
+            <li role="presentation" class="active"><a href="index.html">Home</a></li>
+            <li role="presentation"><a href="111.html" class="skyblue">html</a></li>
+            <li role="presentation"><a href="2.html" class="skyblue">css</a></li>
+            <li role="presentation"><a href="3.html" class="skyblue">javascript</a></li>
+        </ul>
+        <div id="grid">
+            <ol class="skyblue">
+                <li><a href="111.html" class="saw">html</a></li>
+                <li><a href="2.html" class="saw " id="active">css</a></li>
+                <!--id 값은 한번만-->
+                <li><a href="3.html" class="skyblue">javascript</a></li>
+                <br>
+                <img src="https://newsimg.sedaily.com/2020/03/20/1Z09U3LNMJ_1.jpg" style="width:70%">
+            </ol>
 
-        this.value ='day';
-    }
-    ">
-
-    <div class = "container">
-    <h1><a href = "index.html">WEB</a></h1>
-    <ul class="nav nav-tabs">
-        <li role="presentation" class="active"><a href="index.html">Home</a></li>
-        <li role="presentation"><a href="111.html">html</a></li>
-        <li role="presentation"><a href="2.html">css</a></li>
-        <li role="presentation"><a href="3.html">javascript</a></li>
-    </ul>
-    <div id ="grid">
-        <ol>
-            <li><a href="111.html" class = "saw">html</a></li>
-            <li><a href="2.html" class = "saw " id ="active">css</a></li>  <!--id 값은 한번만-->
-            <li><a href="3.html">javascript</a></li>
-            <br>
-            <img src="https://newsimg.sedaily.com/2020/03/20/1Z09U3LNMJ_1.jpg" style="width:70%">
-        </ol>
-
-        <div id = "article">
-            <a href ="https://www.w3.org/TR/html51/"
-            target="_blank" title="html 설명서">Html 오늘부터 시작합니다 헤헤</a>
-            <strong><u>열심히</u> 해볼께유</strong>
-            <p><span style ="font-weight: bold">22일</span> 영국 ‘HITC’는 “스테번 베르흐베인이 거의 복귀한 것으로 보인다”고 전했다. 
-                토트넘은 구단 홈페이지를 통해 베르흐베인이 회복 중이라고 알렸다. 베르흐베인도 “점점 나아지고 있다”며 자신의 현 상태를 전했다.</p>
-            <p style="margin-top: 45px;">베르흐베인은 지난 1월 토트넘 유니폼을 입으며 공격에 힘을 실어줄 것으로 기대를 모았다.
-                 <span class ="however">하지만</span> 지난 8일 번리와의 프리미어리그 29라운드 원정경기를 마친 뒤 왼쪽 발목 부상으로 전력에서 제외됐다.</p>
-            <p>당초 시즌 아웃까지 전망됐으나 프리미어리그가 코로나19로 4월말까지 중단하면서 복귀 시간을 벌었다. 
-                토트넘도 해리 케인, 손흥민에 이어 베르흐베인까지 쓰러지며 공격진이 무너진 상태에서 코로나19로 리그가 중단되면서 이들의 복귀를 기대하게 됐다.</p>
-            <p>‘HITC’는 “시즌이 무효되지 않고 가까운 시일에 재개하면 베르흐베인이 경기에 나설 수 있다”고 했다.</p>
-            <p><br><br>토트넘으로서는<br> 리그 재개 후 상위권을 추격할 수 있는 힘이 생기게 됐다. 이미 케인이 복귀를 위한 훈련에 집중한 가운데 손흥민도 재활 훈련을 시작했다. 4월 말까지 중단한 만큼 복귀를 위한 시간은 충분하다. 그리고 베르흐베인도 5월에는 충분히 실전에 나설 것으로 전망된다.</p>
+            <div id="article">
+                <a href="https://www.w3.org/TR/html51/" target="_blank" title="html 설명서" class="skyblue">Html 오늘부터 시작합니다
+                    헤헤</a>
+                <strong><u>열심히</u> 해볼께유</strong>
+                <p><span style="font-weight: bold">22일</span> 영국 ‘HITC’는 “스테번 베르흐베인이 거의 복귀한 것으로 보인다”고 전했다.
+                    토트넘은 구단 홈페이지를 통해 베르흐베인이 회복 중이라고 알렸다. 베르흐베인도 “점점 나아지고 있다”며 자신의 현 상태를 전했다.</p>
+                <p style="margin-top: 45px;">베르흐베인은 지난 1월 토트넘 유니폼을 입으며 공격에 힘을 실어줄 것으로 기대를 모았다.
+                    <span class="however">하지만</span> 지난 8일 번리와의 프리미어리그 29라운드 원정경기를 마친 뒤 왼쪽 발목 부상으로 전력에서 제외됐다.</p>
+                <p>당초 시즌 아웃까지 전망됐으나 프리미어리그가 코로나19로 4월말까지 중단하면서 복귀 시간을 벌었다.
+                    토트넘도 해리 케인, 손흥민에 이어 베르흐베인까지 쓰러지며 공격진이 무너진 상태에서 코로나19로 리그가 중단되면서 이들의 복귀를 기대하게 됐다.</p>
+                <p>‘HITC’는 “시즌이 무효되지 않고 가까운 시일에 재개하면 베르흐베인이 경기에 나설 수 있다”고 했다.</p>
+                <p><br><br>토트넘으로서는<br> 리그 재개 후 상위권을 추격할 수 있는 힘이 생기게 됐다. 이미 케인이 복귀를 위한 훈련에 집중한 가운데 손흥민도 재활 훈련을 시작했다. 4월
+                    말까지 중단한 만큼 복귀를 위한 시간은 충분하다. 그리고 베르흐베인도 5월에는 충분히 실전에 나설 것으로 전망된다.</p>
+            </div>
         </div>
-    </div>
-    <button type="button" class="btn btn-primary"><a href = "https://ko.wikipedia.org/wiki/HTML" target = "_blank"
-        style =  "color: white">Go to HTML Wiki</a></button>
+        <button type="button" class="btn btn-primary"><a href="https://ko.wikipedia.org/wiki/HTML" target="_blank"
+                style="color: white">Go to HTML Wiki</a></button>
 
-   
-    <p>
-        <br><a href="mediaquery.html">미디어쿼리 연습</a>
 
-        <br><input type = "button" value="hi" onclick ="alert('hi')">
-    </p>
+        <p>
+            <br><a href="mediaquery.html" class="skyblue">미디어쿼리 연습</a>
+
+            <br><input type="button" value="hi" onclick="alert('hi')">
+        </p>
     </div>
 </body>
 

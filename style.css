@@ -1,6 +1,11 @@
 a,li{  /*태그 선택자*/   /*css selector 검색을 통해 짜기*/
-    color:skyblue;
     text-decoration: none; 
+}
+.skyblue{
+    color:skyblue;
+}
+.lightgreen{
+    color: lightgreen;
 }
 .saw{ /* . class가 saw인 태그 선택*/
     color:gray;
